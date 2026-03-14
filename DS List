@@ -1,0 +1,58 @@
+places = ['Paris', 'Berlin', 'Seoul']
+print(places[0]) # 'Paris'
+print(places[-1]) # 'Seoul'
+
+coder = 'Michael'
+letters = list(coder)
+print(letters)  # ['M', 'i', 'c', 'h', 'a', 'e', 'l']
+ 
+values = [10, 20, 30, 40, 50]
+size = len(values)
+print(size)#5
+
+languages = ['Go', 'Swift', 'Kotlin', 'Ruby']
+languages[0] = 'TypeScript'
+print(languages) # ['TypeScript', 'Swift', 'Kotlin', 'Ruby']
+"""
+languages[10] = 'TypeScript'
+****************************************
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+IndexError: list assignment index out of range
+"""
+profile = ['John Smith', 30, 'Web Developer']
+del profile[1]
+print(profile) # ['John Smith', 'Web Developer']
+
+tech_stack = ['Go', 'Swift', 'Kotlin', 'Ruby']
+print('Ruby' in tech_stack)#True
+print('PHP' in tech_stack)#False
+
+engineer = ['David', 28, ['Go', 'Ruby', 'Kotlin']]
+print(engineer[2]) # ['Go', 'Ruby', 'Kotlin']
+print(engineer[2][1]) # 'Ruby'
+
+worker = ['Emma', 29, 'Data Analyst']
+person_name, person_age, profession = worker
+print(person_name) # 'Emma'
+print(person_age) # 29
+print(profession) # 'Data Analyst'
+
+worker = ['Emma', 29, 'Data Analyst']
+person_name, *other_info = worker
+print(person_name) # 'Emma'
+print(other_info) # [29, 'Data Analyst']
+
+worker = ['Emma', 29, 'Data Analyst']
+"""
+person_name, person_age, profession, location = worker
+********************************
+Traceback (most recent call last):
+  File "<stdin>", line 48, in <module>
+ValueError: not enough values to unpack (expected 4, got 3)
+"""
+snacks = ['Donut', 'Muffin', 'Cupcake', 'Waffle', 'Pudding']
+print(snacks[1:4]) # ['Muffin', 'Cupcake', 'Waffle']
+
+digits = [11, 22, 33, 44, 55, 66]
+print(digits[1::2]) # [22, 44, 66]
