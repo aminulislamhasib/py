@@ -1,0 +1,59 @@
+# for loop
+# A for loop iterates through each element of a sequence (list, tuple, string, etc.)
+movies = ['Inception', 'Avatar', 'Titanic', 'Matrix']
+for film in movies:      # take one movie at a time from the list
+    print(film)          # print the current movie
+
+# for loop with string
+# A string is also iterable, so the loop goes through each character
+for letter in 'play':    # iterate through each character in the string
+    print(letter)
+
+# nested for loop
+# A loop inside another loop
+# The inner loop runs completely for every iteration of the outer loop
+sections = ['Drinks', 'Snacks']
+items = ['Tea', 'Chips', 'Juice']
+for section in sections:     # outer loop
+    for item in items:       # inner loop
+        print(section, item) # prints all combinations
+
+# while loop
+# while loop runs as long as the condition remains True
+target = 4
+guess = 0
+while guess != target:   # loop continues until guess becomes 4
+    guess = int(input('Guess the number (1-5): '))  # user input str -> turn into int
+    if guess != target:
+        print('Incorrect! Try again.')
+print('Correct guess!')  # executes after the loop condition becomes False
+
+# break example
+# break immediately stops the loop
+players = ['Alex', 'Jordan', 'Sam']
+for person in players:
+    if person == 'Jordan':
+        break             # stop the loop when 'Jordan' is found
+    print(person)         # prints only 'Alex'
+
+# continue example
+# continue skips the current iteration and moves to the next one
+players = ['Alex', 'Jordan', 'Sam']
+for person in players:
+    if person == 'Jordan':
+        continue          # skip printing 'Jordan'
+    print(person)         # prints 'Alex' and 'Sam'
+
+# for loop with else
+# The else block runs only if the loop finishes normally
+# (i.e., it was NOT stopped by a break)
+animals = ['sky', 'tiger', 'rhythm', 'lynx', 'eagle']
+for animal in animals:
+    for letter in animal:                 # check each letter of the word
+        if letter.lower() in 'aeiou':     # check if the letter is a vowel
+            print(f"'{animal}' contains the vowel '{letter}'")
+            break                         # stop checking this word once vowel found
+    else:
+        # This else belongs to the INNER loop
+        # It runs only if the inner loop never executed 'break'
+        print(f"'{animal}' has no vowels")
