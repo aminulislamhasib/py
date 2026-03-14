@@ -1,0 +1,85 @@
+# .count()
+# count(value) returns how many times a value appears in the tuple
+
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple')
+print(basket.count('Apple'))  # 2 → 'Apple' appears two times
+
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple')
+print(basket.count('Pineapple'))  
+# 0 → 'Pineapple' does not exist in the tuple
+
+"""
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple')
+basket.count()  
+# TypeError → count() requires an argument (the value to count)
+Traceback (most recent call last):
+  File "/box/main.py", line 12, in <module>
+    fruit_basket.count()  
+    ^^^^^^^^^^^^^^^^^^^^
+TypeError: tuple.count() takes exactly one argument (0 given)
+"""
+# .index()
+# index(value) returns the index position of the FIRST matching value
+
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple')
+print(basket.index('Banana'))  # 1 → 'Banana' is at index 1
+
+"""
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple')
+basket.index('Pineapple')  
+# ValueError → 'Pineapple' is not found in the tuple
+
+Traceback (most recent call last):
+  File "/box/main.py", line 8, in <module>
+    print(fruit_basket.count('Pineapple'))  
+          ^^^^^^^^^^^^
+NameError: name 'basket' is not defined
+"""
+# .index() with start argument
+# index(value, start)
+# search starts from the given index
+
+basket = ('Apple', 'Banana', 'Mango', 'Orange', 'Apple', 'Mango')
+print(basket.index('Mango', 3))  
+# 5 → search starts from index 3, so the next 'Mango' is found at index 5
+
+
+# .index() with start and stop arguments
+# index(value, start, stop)
+# search happens only between start and stop indexes
+
+basket = (
+    'Apple', 'Banana', 'Mango', 'Orange',
+    'Apple', 'Mango', 'Pineapple', 'Mango'
+)
+
+print(basket.index('Mango', 2, 5))
+# 2 → search range is index 2 to 4
+# the first 'Mango' in this range is at index 2
+
+
+# sorted()
+# sorted() returns a NEW sorted list from the tuple
+# the original tuple is unchanged
+
+scores = (91, 15, 73, 28, 64, 40, 56, 33)
+print(sorted(scores))  
+# [15, 28, 33, 40, 56, 64, 73, 91]
+
+# sorted() with key
+# key allows custom sorting logic
+# here key=len means sort based on string length
+
+city = ('Rome', 'Paris', 'Singapore', 'Oslo', 'Rome', 'Berlin')
+
+print(sorted(city, key=len))
+# ['Oslo', 'Rome', 'Rome', 'Paris', 'Berlin', 'Singapore']
+# shortest strings appear first
+
+# sorted() with reverse
+# reverse=True sorts the result in descending order
+
+city = ('Rome', 'Paris', 'Singapore', 'Oslo', 'Rome', 'Berlin')
+
+print(sorted(city, reverse=True))
+# ['Singapore', 'Rome', 'Rome', 'Paris', 'Oslo', 'Berlin']
