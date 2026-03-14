@@ -57,3 +57,29 @@ for animal in animals:
         # This else belongs to the INNER loop
         # It runs only if the inner loop never executed 'break'
         print(f"'{animal}' has no vowels")
+
+# range() with stop only
+# Generates numbers from 0 up to (but not including) stop
+for i in range(4):  # 0, 1, 2, 3 4exclusive
+    print(i)
+
+# range() with start and stop
+# Generates numbers from start up to (but not including) stop
+for i in range(2, 6):  # 2, 3, 4, 5 6exclusive
+    print(i)
+
+# range() with start, stop, and step
+# Step determines the increment between numbers
+for i in range(3, 16, 3):  # 3, 6, 9, 12, 15
+    print(i)
+
+# range() with negative step
+# Counts backwards when step is negative
+for i in range(50, 0, -15):  # 50, 35, 20, 5
+    print(i)
+
+# range() with list constructor
+# Converts the range into a list
+numbersList = list(range(5, 21, 5))  
+# [5, 10, 15, 20]
+print(numbersList)
