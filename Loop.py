@@ -83,3 +83,37 @@ for i in range(50, 0, -15):  # 50, 35, 20, 5
 numbersList = list(range(5, 21, 5))  
 # [5, 10, 15, 20]
 print(numbersList)
+
+
+# manual index tracking
+# Here we manually track the index using a separate variable
+countries = ['Japan', 'Brazil', 'Canada', 'Italy']
+position = 0  # starting index
+for country in countries:  
+    print(position,country)
+    position += 1  # increase index manually after each iteration
+
+# enumerate() basic
+# enumerate() automatically provides both index and value
+countries = ['Japan', 'Brazil', 'Canada', 'Italy']
+for position, country in enumerate(countries):
+    # enumerate returns pairs: (index, element)
+    print(position,country)
+
+# enumerate() with start argument
+# You can change the starting index
+countries = ['Japan', 'Brazil', 'Canada', 'Italy']
+for position, country in enumerate(countries, 1):
+    # index will start from 1 instead of the default 0
+    print(position,country)
+
+# zip() example
+# zip() combines multiple iterables together
+# Each iteration returns a pair of elements (one from each list)
+students = ['Liam', 'Olivia', 'Noah', 'Emma']
+codes = [101, 102, 103, 104]
+for person, code in zip(students, codes):
+    # person comes from students list
+    # code comes from codes list
+    print(f'Name: {person}')
+    print(f'Code: {code}')
