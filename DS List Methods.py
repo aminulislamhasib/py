@@ -93,3 +93,71 @@ digits = [42, 7, 19, 3, 55, 28]
 ordered_digits = sorted(digits)
 print(digits) # [42, 7, 19, 3, 55, 28]  (original list unchanged)
 print(ordered_digits) # [3, 7, 19, 28, 42, 55]
+
+
+# creating even numbers using a loop
+# Create an empty list first
+evenlist = []
+for value in range(25):          # numbers from 0 to 24
+    if value % 2 == 0:           # check if the number is even
+        evenlist.append(value)   # add it to the list
+print(evenlist)
+
+
+# list comprehension
+# A shorter and more Pythonic way to create the same list
+evenlist = [value for value in range(25) if value % 2 == 0]
+# structure: [expression for item in iterable if condition]
+print(evenlist)
+
+
+# list comprehension with if-else
+# if-else can be used inside comprehension to transform values
+values = [2, 3, 4, 5, 6] 
+status = [
+    (value, 'Even') if value % 2 == 0 else (value, 'Odd')
+    for value in values
+]  
+# each number becomes a tuple: (number, 'Even' or 'Odd')
+print(status)
+
+
+# filter() example 
+# filter() keeps elements that satisfy a condition
+items = ['ocean', 'sky', 'forest', 'lake', 'desert', 'hill']
+def checklength(text):
+    return len(text) > 4   # keep words longer than 4 characters
+longitems = list(filter(checklength, items))
+# filter returns an iterator → convert to list
+print(longitems)
+
+
+# map() example
+# map() applies a function to each element in an iterable
+temps = [5, 15, 25, 35, 45]
+def convert(temp):
+    return (temp * 9/5) + 32   # Celsius → Fahrenheit conversion
+fvalues = list(map(convert, temps))
+# convert() is applied to every temperature
+print(fvalues)
+
+
+# sum() example
+# sum() adds all elements of an iterable
+values = [6, 12, 18, 24]
+totalvalue = sum(values)
+print(totalvalue)
+
+
+# sum() with start positional argument
+# start value is added before summing the list
+values = [6, 12, 18, 24]
+totalvalue = sum(values, 20)  # start from 20
+print(totalvalue)
+
+
+# sum() with start keyword argument
+# same as above but using keyword syntax
+values = [6, 12, 18, 24]
+totalvalue = sum(values, start=20)
+print(totalvalue)
