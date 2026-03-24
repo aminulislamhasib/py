@@ -38,9 +38,11 @@ print(omega_pool.isdisjoint(theta_pool)) # Returns True if no common elements
 
 # Perform union operation
 print(omega_pool | theta_pool)           # Combines all unique elements from both sets
+print(theta_pool | omega_pool)
 
 # Perform intersection operation
 print(omega_pool & theta_pool)           # Elements common to both sets
+print(theta_pool & omega_pool)
 
 # Perform difference operation
 print(omega_pool - theta_pool)           # Elements in omega_pool but not in theta_pool
