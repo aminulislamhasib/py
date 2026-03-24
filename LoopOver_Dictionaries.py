@@ -13,6 +13,9 @@ for val in gamma_box.values():      # Iterate over all values in the dictionary
 # Loop through all keys in the dictionary and print each one
 for key in gamma_box:               # Iterate over all keys (default behavior)
     print(key)                      # Print each key
+for key in gamma_box.keys():        # Iterate over all keys 
+    print(key)                      # Print each key
+
 
 # Loop through all key-value pairs and print them as tuples
 for pair in gamma_box.items():      # Iterate over key-value pairs as tuples
@@ -25,14 +28,12 @@ for k, v in gamma_box.items():      # Unpack key into k and value into v
 # Apply a transformation to each value and update the dictionary
 for k, v in gamma_box.items():      # Iterate over key-value pairs
     gamma_box[k] = round(v * 0.75)  # Modify each value by multiplying and rounding
-
 # Print the updated dictionary
 print(gamma_box)                    # Display dictionary after modification
 
 # Use enumerate to loop through keys with an index
 for idx, key in enumerate(gamma_box):  # idx is the counter, key is the dictionary key
     print(idx, key)                    # Print index and key
-
 # Use enumerate to loop through values with an index
 for idx, val in enumerate(gamma_box.values()):  # idx is the counter, val is the value
     print(idx, val)                            # Print index and value
